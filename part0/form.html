@@ -9,24 +9,93 @@
 
   <body>
     <h1>This is my form page</h1>
+    <p>Required fields are followed by <span aria-label="required">*</span>.</p>
     <form action="/my-handling-form-page" method="post">
       <ul>
         <li>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="user_name" />
+          <label for="name">Name: <span aria-label="required">*</span></label>
+          <input type="text" id="name" name="user_name" required />
         </li>
         <li>
-          <label for="mail">Email:</label>
-          <input type="email" id="mail" name="user_email" />
+          <label for="mail">Email: <span aria-label="required">*</span></label>
+          <input type="email" id="mail" name="user_email" required />
         </li>
         <li>
-          <label for="msg">Message:</label>
-          <textarea id="msg" name="user_message">Default text</textarea>
+          <label for="msg">Message: <span aria-label="required">*</span></label>
+          <textarea id="msg" name="user_message" required>
+Default text</textarea
+          >
         </li>
         <li class="button">
           <button type="submit">Send your message</button>
         </li>
       </ul>
     </form>
+
+    <form>
+      <fieldset>
+        <legend>Fruit juice size</legend>
+        <p>
+          <input type="radio" name="size" id="size_1" value="small" />
+          <label for="size_1">Small</label>
+        </p>
+        <p>
+          <input type="radio" name="size" id="size_2" value="medium" />
+          <label for="size_2">Medium</label>
+        </p>
+        <p>
+          <input type="radio" name="size" id="size_3" value="large" />
+          <label for="size_3">Large</label>
+        </p>
+      </fieldset>
+    </form>
+
+    <section>
+      <h2>Contact information</h2>
+      <fieldset>
+        <legend>Title</legend>
+        <ul>
+          <li>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="K" />
+              King
+            </label>
+          </li>
+          <li>
+            <label for="title_2">
+              <input type="radio" id="title_2" name="title" value="Q" />
+              Queen
+            </label>
+          </li>
+          <li>
+            <label for="title_3">
+              <input type="radio" id="title_3" name="title" value="J" />
+              Joker
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <p>
+        <label for="name">
+          <span>Name: </span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input type="text" id="name" name="username" required />
+      </p>
+      <p>
+        <label for="mail">
+          <span>Email: </span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input type="email" id="mail" name="usermail" required />
+      </p>
+      <p>
+        <label for="pwd">
+          <span>Password: </span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input type="password" id="pwd" name="password" required />
+      </p>
+    </section>
   </body>
 </html>
